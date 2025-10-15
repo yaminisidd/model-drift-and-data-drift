@@ -1,0 +1,19 @@
+{
+  "promotions_dup_agg_func": {
+    "item_id": "first",
+    "txn_dt": "first",
+    "order_header_key": "first",
+    "order_line_key": "first",
+    "total_demand_qty": "first",
+    "total_demand_amt": "first",
+    "promotion_cd": "first",
+    "discount_amt": "sum"
+  },
+  "weekly_agg_func" : {
+    "total_demand_qty": "sum",
+    "total_demand_amt": "sum",
+    "discount_amt": "mean",
+    "promotion_freq": "mean",
+    "has_promotion_cd": "lambda x: 1 if any(x==1) else 0"
+  }
+}
